@@ -1,2 +1,2 @@
 hello git how are u
-i was changing in git hub
+i was changing in git hub through commit 
