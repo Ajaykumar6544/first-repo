@@ -1,0 +1,39 @@
+import java.util.*;
+
+class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+
+        char h1 = s.charAt(0);
+        
+     char h2 = s.charAt(1);
+        int hr = (h1-'0')*10+(h2 - '0');
+
+
+        char m1 = s.charAt(3);
+        char m2 = s.charAt(4);
+        char s1 = s.charAt(6);
+        char s2 = s.charAt(7);
+
+        char a = s.charAt(8);
+
+        if (a=='A') {
+            if (hr==12){
+              hr=0;  
+            } 
+        } else {
+            if (hr != 12){
+                 hr += 12;
+        }
+        }
+
+        if (hr < 10) System.out.print("0");
+        System.out.print(hr+":");
+        System.out.print(m1);
+        System.out.print(m2);
+        System.out.print(":");
+        System.out.print(s1);
+        System.out.print(s2);
+    }
+}
