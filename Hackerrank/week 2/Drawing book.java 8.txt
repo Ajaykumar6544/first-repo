@@ -1,0 +1,12 @@
+import java.util.*;
+class Solution{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int p=sc.nextInt();
+        int ff=p/2;
+        int fb=(n/2)-(p/2);
+        int min=Math.min(ff,fb);
+        System.out.print(min);
+    }
+}
