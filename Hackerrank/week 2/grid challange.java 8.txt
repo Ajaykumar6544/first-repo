@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        for (int t = 0; t < a; t++) {
+            int b = sc.nextInt();
+            String[] arr = new String[b];
+            for (int i = 0; i < b; i++) {
+                char[] c = sc.next().toCharArray();
+                Arrays.sort(c);
+                arr[i] = new String(c);
+            }
+            String ans = "YES";
+            int len = arr[0].length();
+            for (int col = 0; col < len; col++) {
+                for (int row = 1; row < b; row++) {
+                    if (arr[row].charAt(col) < arr[row - 1].charAt(col)) {
+                        ans = "NO";
+                        break;
+                    }
+                }
+                if (ans.equals("NO")) break;
+            }
+            System.out.println(ans);
+        }
+        sc.close();
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.*;
+class Solution{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int nb=sc.nextInt();
+            int a[]=new int[nb];
+            long s=0;
+            for(int i=0;i<nb;i++){
+                a[i]=sc.nextInt();
+                s+=a[i];
+            }
+            long n=0;
+            String an="NO";
+            for(int i=0;i<nb;i++){
+                long p=s-n-a[i];
+                if(n==p){
+                    an="YES";
+                    break;
+                }
+                n+=a[i];
+            }
+            System.out.println(an);
+        }
+    }
+}
